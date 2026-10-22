@@ -16,9 +16,9 @@ for (x = 2; x <= args.length - 1; x++) {
 	await page.click('input[type="submit"]');
 	const page2 = await browser.newPage();
 	await page2.goto('https://github.com');
-	await page2.waitFor(500);
+	await new Promise(resolve => setTimeout(resolve, 500));
 	await page2.click('body > div.application-main > div > aside > div > div > div > form > button');
-	await page2.waitFor(1000);
+	await new Promise(resolve => setTimeout(resolve, 1000));
 	const data = await page2.evaluate(() => [
 		...document.querySelectorAll(
 			'body > div > div > aside > div > div > div > ul > li > div > a > span:nth-child(3)'
