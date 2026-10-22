@@ -1,0 +1,14 @@
+{
+  "name": "list-repository",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "puppeteer": "^25.15.0"
+  },
+  "engines": {
+    "node": ">=22.18.0"
+  }
+}
